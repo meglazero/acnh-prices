@@ -1,0 +1,670 @@
+[
+    [
+        "Name",
+        "Image",
+        "Source",
+        "Sell price"
+    ],
+    [
+        "Tree branch",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d6/NH-Icon-Crafting_material-Branch.png",
+        "Shaking trees",
+        "5"
+    ],
+    [
+        "Wood",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/50/NH-Icon-Crafting_material-Wood.png",
+        "Use axe on a tree",
+        "60"
+    ],
+    [
+        "Hardwood",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c6/NH-Icon-Crafting_material-Hardwood.png",
+        "Use axe on a tree",
+        "60"
+    ],
+    [
+        "Softwood",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/f2/NH-softwood-icon.png",
+        "Use axe on a tree",
+        "60"
+    ],
+    [
+        "Stone",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/01/NH-stone-icon.png",
+        "Hitting rocks, Shaking trees, Fishing, Balloon presents",
+        "75"
+    ],
+    [
+        "Clay",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2a/NH-clay-icon.png",
+        "Hitting rocks, Balloon presents",
+        "100"
+    ],
+    [
+        "Iron nugget",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/fa/NH-iron_nugget-icon.png",
+        "Hitting rocks, Balloon presents",
+        "375"
+    ],
+    [
+        "Gold nugget",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/08/NH-gold_nugget-icon.png",
+        "Hitting rocks, Balloon presents",
+        "10000"
+    ],
+    [
+        "Bamboo piece",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/ae/NH-bamboo_piece-icon.png",
+        "Use axe on bamboo",
+        "80"
+    ],
+    [
+        "Bamboo shoot",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/79/NH-bamboo_shoot-icon.png",
+        "Digging near bamboo",
+        "250"
+    ],
+    [
+        "Clump of weeds",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/13/NH-Icon-Weed.png",
+        "Pulled off ground",
+        "10\nCan be sold to Leif for 20"
+    ],
+    [
+        "Wasp nest",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c0/NH-wasp_nest-icon.png",
+        "Shaking trees",
+        "300"
+    ],
+    [
+        "Communicator part",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7a/NH-Icon-Communicator_part.png",
+        "Found by digging into spots at the beach where water squirts out of the ground during Gulliver's visit when the player is asked to fix his phone",
+        "20"
+    ],
+    [
+        "Rusted part",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/99/NH-rusted_part-icon.png",
+        "Recycling bin after a Gulliver visit or by not turning the Communicator Parts into Gulliver before the next day",
+        "10"
+    ],
+    [
+        "Boot",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1b/NH-boot-icon.png",
+        "Fishing",
+        "10"
+    ],
+    [
+        "Empty can",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/9b/NH-empty_can-icon.png",
+        "Fishing",
+        "10"
+    ],
+    [
+        "Old tire",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/b4/NH-old_tire-icon.png",
+        "Fishing",
+        "10"
+    ],
+    [
+        "Apple",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5d/NH-Icon-Fruit-Apple.png",
+        "Trees",
+        "Native: 100, Foreign: 500"
+    ],
+    [
+        "Cherry",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/bf/NH-cherry-icon.png",
+        "Trees",
+        "Native: 100, Foreign: 500"
+    ],
+    [
+        "Coconut",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/b2/NH-coconut-icon.png",
+        "Trees",
+        "250"
+    ],
+    [
+        "Orange",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/4f/NH-orange-icon.png",
+        "Trees",
+        "Native: 100, Foreign: 500"
+    ],
+    [
+        "Peach",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/ff/NH-peach-icon.png",
+        "Trees",
+        "Native: 100, Foreign: 500"
+    ],
+    [
+        "Pear",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/fe/NH-Pear-icon.png",
+        "Trees",
+        "Native: 100, Foreign: 500"
+    ],
+    [
+        "Black cosmos",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7f/NH-black_cosmos-icon.png",
+        "240"
+    ],
+    [
+        "Black lilies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/8/84/NH-black_lilies-icon.png",
+        "80"
+    ],
+    [
+        "Black roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/70/NH-black_roses-icon.png",
+        "240"
+    ],
+    [
+        "Black tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2e/NH-black_tulips-icon.png",
+        "80"
+    ],
+    [
+        "Blue hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a7/NH-blue_hyacinth_icon.png",
+        "80"
+    ],
+    [
+        "Blue pansies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/d/de/NH-Icon-Blue_pansies.png",
+        "80"
+    ],
+    [
+        "Blue roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/0c/NH-blue_roses-icon.png",
+        "1000"
+    ],
+    [
+        "Blue windflowers",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/9c/NH-blue_windflowers-icon.png",
+        "80"
+    ],
+    [
+        "Green mums",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/fc/NH-green_mums-icon.png",
+        "240"
+    ],
+    [
+        "Orange cosmos",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/f9/NH-orange_cosmos-icon.png",
+        "80"
+    ],
+    [
+        "Orange hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/77/NH-orange_hyacinth_icon.png",
+        "80"
+    ],
+    [
+        "Orange lilies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2a/NH-Icon-Orange_lilies.png",
+        "80"
+    ],
+    [
+        "Orange pansies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/4b/NH-Icon-Orange_pansies.png",
+        "80"
+    ],
+    [
+        "Orange roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c1/NH-Icon-Orange_roses.png",
+        "80"
+    ],
+    [
+        "Orange tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/01/NH-orange_tulips-icon.png",
+        "80"
+    ],
+    [
+        "Orange windflowers",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/60/NH-orange_windflowers-icon.png",
+        "40"
+    ],
+    [
+        "Pink cosmos",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e4/NH-pink_cosmos-icon.png",
+        "80"
+    ],
+    [
+        "Pink hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/75/NH-pink_hyacinths-icon.png",
+        "80"
+    ],
+    [
+        "Pink lilies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/79/NH-pink_lilies-icon.png",
+        "80"
+    ],
+    [
+        "Pink mums",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e8/NH-pink_mum_icon.png",
+        "80"
+    ],
+    [
+        "Pink roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/ad/NH-pink_rose_icon.png",
+        "80"
+    ],
+    [
+        "Pink tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/4f/NH-pink_tulips-icon.png",
+        "80"
+    ],
+    [
+        "Pink windflowers",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/95/NH-pink_windflowers-icon.png",
+        "80"
+    ],
+    [
+        "Purple hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a2/NH-purple_hyacinths-icon.png",
+        "240"
+    ],
+    [
+        "Purple mums",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/3/33/NH-purple_mum_icon.png",
+        "80"
+    ],
+    [
+        "Purple pansies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/8/83/NH-purple_pansies-icon.png",
+        "240"
+    ],
+    [
+        "Purple roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/45/NH-purple_roses-icon.png",
+        "240"
+    ],
+    [
+        "Purple tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a5/NH-purple_tulips-icon.png",
+        "240"
+    ],
+    [
+        "Purple windflowers",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/6c/NH-purple_windflowers-icon.png",
+        "240"
+    ],
+    [
+        "Red cosmos",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7a/NH-red_cosmos-icon.png",
+        "40"
+    ],
+    [
+        "Red hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/91/NH-red_hyacinth_icon.png",
+        "40"
+    ],
+    [
+        "Red lilies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/57/NH-red_lily_icon.png",
+        "40"
+    ],
+    [
+        "Red mums",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/14/NH-red_mum_icon.png",
+        "40"
+    ],
+    [
+        "Red pansies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/23/NH-red_pansy_icon.png",
+        "40"
+    ],
+    [
+        "Red roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/94/NH-red_rose_icon.png",
+        "40"
+    ],
+    [
+        "Red tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/94/NH-red_tulips-icon.png",
+        "40"
+    ],
+    [
+        "Red windflowers",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/9d/NH-red_windflowers-icon.png",
+        "40"
+    ],
+    [
+        "White cosmos",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/45/NH-white_cosmos-icon.png",
+        "40"
+    ],
+    [
+        "White hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/8/8b/NH-white_hyacinth_icon.png",
+        "40"
+    ],
+    [
+        "White lilies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/79/NH-white_lily_icon.png",
+        "40"
+    ],
+    [
+        "White mums",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1f/NH-white_mum_icon.png",
+        "40"
+    ],
+    [
+        "White pansies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/98/NH-white_pansy_icon.png",
+        "40"
+    ],
+    [
+        "White roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/22/NH-white_rose_icon.png",
+        "40"
+    ],
+    [
+        "White tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/05/NH-white_tulips-icon.png",
+        "40"
+    ],
+    [
+        "White windflowers",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/54/NH-white_windflowers-icon.png",
+        "40"
+    ],
+    [
+        "Yellow cosmos",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/2a/NH-yellow_cosmos-icon.png",
+        "40"
+    ],
+    [
+        "Yellow hyacinths",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/95/NH-yellow_hyacinths-icon.png",
+        "40"
+    ],
+    [
+        "Yellow lilies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/6f/NH-yellow_lily_icon.png",
+        "40"
+    ],
+    [
+        "Yellow mums",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/9e/NH-yellow_mum_icon.png",
+        "40"
+    ],
+    [
+        "Yellow pansies",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/96/NH-yellow_pansies-icon.png",
+        "40"
+    ],
+    [
+        "Yellow roses",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/67/NH-yellow_rose_icon.png",
+        "40"
+    ],
+    [
+        "Yellow tulips",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/07/NH-yellow_tulips-icon.png",
+        "40"
+    ],
+    [
+        "Conches",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/bc/NH-conch-icon.png",
+        "Found at the beach",
+        "700"
+    ],
+    [
+        "Coral",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/8/88/NH-coral-icon.png",
+        "Found at the beach",
+        "500"
+    ],
+    [
+        "Cowrie",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e9/NH-cowries-icon.png",
+        "Found at the beach",
+        "60"
+    ],
+    [
+        "Giant clam",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/3/35/NH-giant_clam-icon.png",
+        "Found at the beach",
+        "900"
+    ],
+    [
+        "Manila Clam",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/4c/NH-manila_clam-icon.png",
+        "Use the Shovel where water is shooting out of sand",
+        "60"
+    ],
+    [
+        "Sand dollar",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e9/NH-sand_dollar-icon.png",
+        "Found at the beach",
+        "120"
+    ],
+    [
+        "Sea snail",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/6d/NH-snail_shell-icon.png",
+        "Found at the beach",
+        "180"
+    ],
+    [
+        "Venus comb",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c8/NH-venus_comb-icon.png",
+        "Found at the beach",
+        "300"
+    ],
+    [
+        "Star fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c2/NH-star_fragment-icon.png",
+        "Throughout the year",
+        "250"
+    ],
+    [
+        "Large star fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/8/83/NH-large_star_fragment-icon.png",
+        "Throughout the year",
+        "2500"
+    ],
+    [
+        "Capricorn fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/ab/NH-Capricornus_fragment-icon.png",
+        "December 22nd - January 19th",
+        "500"
+    ],
+    [
+        "Aquarius fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/43/NH-Aquarius_fragment-icon.png",
+        "January 20th - February 18th",
+        "500"
+    ],
+    [
+        "Pisces fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1e/NH-Pisces_fragment-icon.png",
+        "February 19th - March 20th",
+        "500"
+    ],
+    [
+        "Aries fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/d/dc/NH-Aries_star_fragment-icon.png",
+        "March 21st - April 19th",
+        "500"
+    ],
+    [
+        "Taurus fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/23/NH-Taurus_fragment-icon.png",
+        "April 20th - May 20th",
+        "500"
+    ],
+    [
+        "Gemini fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1b/NH-Gemini_fragment-icon.png",
+        "May 21st - June 20th",
+        "500"
+    ],
+    [
+        "Cancer fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/be/NH-Cancer_fragment-icon.png",
+        "June 21st - July 22nd",
+        "500"
+    ],
+    [
+        "Leo fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/58/NH-Leo_fragment-icon.png",
+        "July 23rd - August 22nd",
+        "500"
+    ],
+    [
+        "Virgo fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/f5/NH-Virgo_fragment-icon.png",
+        "August 23rd - September 22nd",
+        "500"
+    ],
+    [
+        "Libra fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/ae/NH-Libra_fragment-icon.png",
+        "September 23rd - October 22nd",
+        "500"
+    ],
+    [
+        "Scorpio fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/59/NH-Scorpio_fragment-icon.png",
+        "October 23rd - November 21st",
+        "500"
+    ],
+    [
+        "Sagittarius fragment",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a9/NH-Sagittarius_fragment-icon.png",
+        "November 22nd - December 21st",
+        "500"
+    ],
+    [
+        "Cherry-blossom petal",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/23/NH-cherry-blossom_petal-icon.png",
+        "Caught with a net during cherry-blossom season",
+        "200"
+    ],
+    [
+        "Young spring bamboo",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/b4/NH-young_spring_bamboo-icon.png",
+        "Use axe on bamboo during spring",
+        "200"
+    ],
+    [
+        "Earth egg",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c3/NH-Icon-Earth_egg.png",
+        "Dig cracks in ground during the Bunny Day event",
+        "200"
+    ],
+    [
+        "Leaf egg",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/3/3c/NH-Icon-Leaf_egg.png",
+        "Shake trees during the Bunny Day event",
+        "200"
+    ],
+    [
+        "Sky egg",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/af/NH-Icon-Sky_egg.png",
+        "Pop floating balloons during the Bunny Day event",
+        "200"
+    ],
+    [
+        "Stone egg",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/49/NH-Icon-Stone_egg.png",
+        "Hit rocks during the Bunny Day event",
+        "200"
+    ],
+    [
+        "Water egg",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/4/45/NH-Icon-Water_egg.png",
+        "Catch fish during the Bunny Day event",
+        "200"
+    ],
+    [
+        "Wood egg",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/60/NH-Icon-Wood_egg.png",
+        "Chop trees during the Bunny Day event",
+        "200"
+    ],
+    [
+        "Summer Shell",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/0/0f/NH-summer_shell_icon.png",
+        "On the beach during Summer",
+        "600"
+    ],
+    [
+        "Acorn",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d4/NH-acorn_icon.png",
+        "Shaking hardwood trees during autumn",
+        "200"
+    ],
+    [
+        "Pinecone",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5d/NH-pinecone_icon.png",
+        "Shaking cedar trees during autumn",
+        "200"
+    ],
+    [
+        "Maple leaf",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d9/NH-maple_leaf-icon.png",
+        "Caught with a net during Autumn",
+        "200"
+    ],
+    [
+        "Rare mushroom",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/c/c2/NH-rare_mushroom-icon.png",
+        "On the ground during Mushrooming Season",
+        "16000"
+    ],
+    [
+        "Elegant mushroom",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/2/25/NH-elegant_mushroom-icon.png",
+        "On the ground during Mushrooming Season",
+        "10000"
+    ],
+    [
+        "Flat mushroom",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/93/NH-flat_mushroom-icon.png",
+        "On the ground during Mushrooming Season",
+        "200"
+    ],
+    [
+        "Round mushroom",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e1/NH-round_mushroom-icon.png",
+        "On the ground during Mushrooming Season",
+        "200"
+    ],
+    [
+        "Skinny mushroom",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e7/NH-skinny_mushroom-icon.png",
+        "On the ground during Mushrooming Season",
+        "300"
+    ],
+    [
+        "Snowflake",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/f9/NH-snowflake-icon.png",
+        "Caught with a net during Winter",
+        "200"
+    ],
+    [
+        "Large snowflake",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/79/NH-large_snowflake-icon.png",
+        "Caught with a net during Winter",
+        "2500"
+    ],
+    [
+        "Blue ornament",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/a/a3/NH-blue_ornament-icon.png",
+        "Shaking trees during Festive Season",
+        "50"
+    ],
+    [
+        "Gold ornaments",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/1/1e/NH-gold_ornament-icon.png",
+        "Shaking trees during Festive Season",
+        "50"
+    ],
+    [
+        "Red ornament",
+        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/56/NH-red_ornament-icon.png",
+        "Shaking trees during Festive Season",
+        "50"
+    ]
+]

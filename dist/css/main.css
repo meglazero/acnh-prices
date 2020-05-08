@@ -1,0 +1,122 @@
+body {
+  font-size: 12px;
+}
+
+body #tables {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  width: 100%;
+  font-size: 1.3em;
+}
+
+body #tables div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+body #tables #fish {
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  text-align: center;
+}
+
+body #tables #fish #fishTab {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  border: 1px solid black;
+  border-bottom: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 15% 15% 25% 12% 12%;
+      grid-template-columns: 15% 15% 15% 25% 12% 12%;
+  padding: auto;
+}
+
+body #tables #fish #fishTab #image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body #tables #fish #fishTab:last-child {
+  border-bottom: 1px solid black;
+}
+
+body #tables #bugs {
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  text-align: center;
+}
+
+body #tables #bugs #bugsTab {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  border: 1px solid black;
+  border-bottom: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 15% 15% 37% 12%;
+      grid-template-columns: 15% 15% 15% 37% 12%;
+  padding: auto;
+}
+
+body #tables #bugs #bugsTab #image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body #tables #bugs #bugsTab:last-child {
+  border-bottom: 1px solid black;
+}
+
+body #tables #misc {
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  text-align: center;
+}
+
+body #tables #misc #miscTab {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  border: 1px solid black;
+  border-bottom: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 12% 50% 12%;
+      grid-template-columns: 25% 12% 50% 12%;
+  padding: auto;
+}
+
+body #tables #misc #miscTab #image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body #tables #misc #miscTab:last-child {
+  border-bottom: 1px solid black;
+}
