@@ -76,7 +76,7 @@ function genFish(element) {
     i++;
 
     const image = fishTemp.querySelector('#image');
-    image.style.backgroundImage = element[i];
+    image.style.backgroundImage = "url('" + element[i] + "')";
     i++;
 
     const price = fishTemp.querySelector('#price');
@@ -108,7 +108,7 @@ function genBugs(element) {
     i++;
 
     const image = bugsTemp.querySelector('#image');
-    image.style.backgroundImage = element[i];
+    image.style.backgroundImage = "url('" + element[i] + "')";
     i++;
 
     const price = bugsTemp.querySelector('#price');
@@ -136,7 +136,7 @@ function genMisc(element) {
     i++;
 
     const image = miscTemp.querySelector('#image');
-    image.style.backgroundImage = element[i];
+    image.style.backgroundImage = "url('" + element[i] + "')";
     i++;
     if (element.length != 3) {
         const source = miscTemp.querySelector('#source');

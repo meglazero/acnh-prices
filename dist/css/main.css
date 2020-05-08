@@ -43,6 +43,7 @@ body #tables #fish #fishTab {
   -ms-grid-columns: 15% 15% 15% 25% 12% 12%;
       grid-template-columns: 15% 15% 15% 25% 12% 12%;
   padding: auto;
+  background-color: #0878c248;
 }
 
 body #tables #fish #fishTab #image {
@@ -76,6 +77,7 @@ body #tables #bugs #bugsTab {
   -ms-grid-columns: 15% 15% 15% 37% 12%;
       grid-template-columns: 15% 15% 15% 37% 12%;
   padding: auto;
+  background-color: #21c74b48;
 }
 
 body #tables #bugs #bugsTab #image {
@@ -109,6 +111,7 @@ body #tables #misc #miscTab {
   -ms-grid-columns: 25% 12% 50% 12%;
       grid-template-columns: 25% 12% 50% 12%;
   padding: auto;
+  background-color: #b3d41f48;
 }
 
 body #tables #misc #miscTab #image {
