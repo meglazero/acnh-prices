@@ -13,7 +13,6 @@ fishn = 2
 bugsn = 2
 miscn = 2
 
-// const fishTemplate = document.querySelector('#fishTemplate');
 const fishTable = document.querySelector('#fish')
 const bugsTable = document.querySelector('#bugs')
 const miscTable = document.querySelector('#misc')
@@ -54,9 +53,6 @@ function triggered(json, table) {
         misc = json;
     }
     if (fish.length > 0 && bugs.length > 0 && misc.length > 0) {
-        // fishGen = fish
-        // bugsGen = bugs
-        // miscGen = misc
         fish.forEach(element => {
             fishGen.push(element)
         });
@@ -76,10 +72,6 @@ function triggered(json, table) {
         miscGen.forEach(element => {
             genMisc(element)
         });
-
-        // fish = fishGen
-        // bugs = bugsGen
-        // misc = miscGen
     }
 };
 

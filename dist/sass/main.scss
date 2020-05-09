@@ -1,6 +1,10 @@
 body{
     font-size: 12px;
     background-color: #c7c7c7;
+    margin: none;
+    padding: none;
+    font-style: none;
+
     #tables{
         display: flex;
         flex-direction: row;
@@ -19,7 +23,7 @@ body{
             text-align: center;
 
             button{
-                height: 50px;
+                height: auto;
                 width: 20%;
                 padding: 10px;
                 margin: 2px;
@@ -58,7 +62,7 @@ body{
             text-align: center;
 
             button{
-                height: 50px;
+                height: auto;
                 width: 20%;
                 padding: 10px;
                 margin: 2px;
@@ -97,7 +101,7 @@ body{
             text-align: center;
 
             button{
-                height: 50px;
+                height: auto;
                 width: 20%;
                 padding: 10px;
                 margin: 2px;
@@ -126,6 +130,50 @@ body{
 
             #miscTab:last-child{
                 border-bottom: 1px solid black;
+            }
+        }
+    }
+}
+
+@media(max-width: 400px){
+    body{
+
+        #tables{
+
+            font-size: .8em;
+            #fish{
+    
+                button{
+                    width: 28%;
+                    font-size: .9em;
+                }
+
+                #fishTab, #defaultFishTab{
+                    min-width: 200px;
+                }
+            }
+            #bugs{
+    
+                button{
+                    width: 28%;
+                    font-size: .9em;
+                }
+
+                #bugsTab, #defaultBugsTab{
+                    min-width: 200px;
+                }
+            }
+
+            #misc{
+    
+                button{
+                    width: 28%;
+                    font-size: .9em;
+                }
+
+                #miscTab, #defaultMiscTab{
+                    min-width: 200px;
+                }
             }
         }
     }

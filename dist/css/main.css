@@ -1,6 +1,9 @@
 body {
   font-size: 12px;
   background-color: #c7c7c7;
+  margin: none;
+  padding: none;
+  font-style: none;
 }
 
 body #tables {
@@ -31,7 +34,7 @@ body #tables #fish {
 }
 
 body #tables #fish button {
-  height: 50px;
+  height: auto;
   width: 20%;
   padding: 10px;
   margin: 2px;
@@ -74,7 +77,7 @@ body #tables #bugs {
 }
 
 body #tables #bugs button {
-  height: 50px;
+  height: auto;
   width: 20%;
   padding: 10px;
   margin: 2px;
@@ -117,7 +120,7 @@ body #tables #misc {
 }
 
 body #tables #misc button {
-  height: 50px;
+  height: auto;
   width: 20%;
   padding: 10px;
   margin: 2px;
@@ -150,5 +153,32 @@ body #tables #misc #miscTab #image, body #tables #misc #defaultMiscTab #image {
 
 body #tables #misc #miscTab:last-child {
   border-bottom: 1px solid black;
+}
+
+@media (max-width: 400px) {
+  body #tables {
+    font-size: .8em;
+  }
+  body #tables #fish button {
+    width: 28%;
+    font-size: .9em;
+  }
+  body #tables #fish #fishTab, body #tables #fish #defaultFishTab {
+    min-width: 200px;
+  }
+  body #tables #bugs button {
+    width: 28%;
+    font-size: .9em;
+  }
+  body #tables #bugs #bugsTab, body #tables #bugs #defaultBugsTab {
+    min-width: 200px;
+  }
+  body #tables #misc button {
+    width: 28%;
+    font-size: .9em;
+  }
+  body #tables #misc #miscTab, body #tables #misc #defaultMiscTab {
+    min-width: 200px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
