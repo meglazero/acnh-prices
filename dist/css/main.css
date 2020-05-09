@@ -1,5 +1,6 @@
 body {
   font-size: 12px;
+  background-color: #c7c7c7;
 }
 
 body #tables {
@@ -29,7 +30,16 @@ body #tables #fish {
   text-align: center;
 }
 
-body #tables #fish #fishTab {
+body #tables #fish button {
+  height: 50px;
+  width: 20%;
+  padding: 10px;
+  margin: 2px;
+  background-color: #0878c248;
+  border: 3px double #464646;
+}
+
+body #tables #fish #fishTab, body #tables #fish #defaultFishTab {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -46,7 +56,7 @@ body #tables #fish #fishTab {
   background-color: #0878c248;
 }
 
-body #tables #fish #fishTab #image {
+body #tables #fish #fishTab #image, body #tables #fish #defaultFishTab #image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -63,7 +73,16 @@ body #tables #bugs {
   text-align: center;
 }
 
-body #tables #bugs #bugsTab {
+body #tables #bugs button {
+  height: 50px;
+  width: 20%;
+  padding: 10px;
+  margin: 2px;
+  background-color: #21c74b48;
+  border: 3px double #464646;
+}
+
+body #tables #bugs #bugsTab, body #tables #bugs #defaultBugsTab {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -80,7 +99,7 @@ body #tables #bugs #bugsTab {
   background-color: #21c74b48;
 }
 
-body #tables #bugs #bugsTab #image {
+body #tables #bugs #bugsTab #image, body #tables #bugs #defaultBugsTab #image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -97,7 +116,16 @@ body #tables #misc {
   text-align: center;
 }
 
-body #tables #misc #miscTab {
+body #tables #misc button {
+  height: 50px;
+  width: 20%;
+  padding: 10px;
+  margin: 2px;
+  background-color: #b3d41f48;
+  border: 3px double #464646;
+}
+
+body #tables #misc #miscTab, body #tables #misc #defaultMiscTab {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -114,7 +142,7 @@ body #tables #misc #miscTab {
   background-color: #b3d41f48;
 }
 
-body #tables #misc #miscTab #image {
+body #tables #misc #miscTab #image, body #tables #misc #defaultMiscTab #image {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -123,3 +151,4 @@ body #tables #misc #miscTab #image {
 body #tables #misc #miscTab:last-child {
   border-bottom: 1px solid black;
 }
+/*# sourceMappingURL=main.css.map */

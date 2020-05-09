@@ -1,5 +1,6 @@
 body{
     font-size: 12px;
+    background-color: #c7c7c7;
     #tables{
         display: flex;
         flex-direction: row;
@@ -10,13 +11,23 @@ body{
         div{
             flex: 1;
         }
+
         #fish{
             margin: 2px;
             padding: auto;
             width: auto;
             text-align: center;
+
+            button{
+                height: 50px;
+                width: 20%;
+                padding: 10px;
+                margin: 2px;
+                background-color: #0878c248;
+                border: 3px double #464646;
+            }
             
-            #fishTab{
+            #fishTab, #defaultFishTab{
                 justify-content: center;
                 width: auto;
                 height: auto;
@@ -45,8 +56,17 @@ body{
             padding: auto;
             width: auto;
             text-align: center;
+
+            button{
+                height: 50px;
+                width: 20%;
+                padding: 10px;
+                margin: 2px;
+                background-color: #21c74b48;
+                border: 3px double #464646;
+            }
             
-            #bugsTab{
+            #bugsTab, #defaultBugsTab{
                 justify-content: center;
                 width: auto;
                 height: auto;
@@ -75,8 +95,17 @@ body{
             padding: auto;
             width: auto;
             text-align: center;
+
+            button{
+                height: 50px;
+                width: 20%;
+                padding: 10px;
+                margin: 2px;
+                background-color: #b3d41f48;
+                border: 3px double #464646;
+            }
             
-            #miscTab{
+            #miscTab, #defaultMiscTab{
                 justify-content: center;
                 width: auto;
                 height: auto;
