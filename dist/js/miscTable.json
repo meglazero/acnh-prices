@@ -1,11 +1,5 @@
 [
     [
-        "Name",
-        "Image",
-        "Source",
-        "Sell price"
-    ],
-    [
         "Tree branch",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/d/d6/NH-Icon-Crafting_material-Branch.png",
         "Shaking trees",
@@ -68,8 +62,8 @@
     [
         "Clump of weeds",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/1/13/NH-Icon-Weed.png",
-        "Pulled off ground",
-        "10\nCan be sold to Leif for 20"
+        "Pulled off ground, Sold to Leif for 20 Bells",
+        "10"
     ],
     [
         "Wasp nest",
@@ -110,14 +104,14 @@
     [
         "Apple",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5d/NH-Icon-Fruit-Apple.png",
-        "Trees",
-        "Native: 100, Foreign: 500"
+        "Trees, Foreign: 500 bells, Foreign: 500 bells",
+        "100"
     ],
     [
         "Cherry",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/b/bf/NH-cherry-icon.png",
-        "Trees",
-        "Native: 100, Foreign: 500"
+        "Trees, Foreign: 500 bells",
+        "100"
     ],
     [
         "Coconut",
@@ -128,20 +122,20 @@
     [
         "Orange",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/4/4f/NH-orange-icon.png",
-        "Trees",
-        "Native: 100, Foreign: 500"
+        "Trees, Foreign: 500 bells",
+        "100"
     ],
     [
         "Peach",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/f/ff/NH-peach-icon.png",
-        "Trees",
-        "Native: 100, Foreign: 500"
+        "Trees, Foreign: 500 bells",
+        "100"
     ],
     [
         "Pear",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/f/fe/NH-Pear-icon.png",
-        "Trees",
-        "Native: 100, Foreign: 500"
+        "Trees, Foreign: 500 bells",
+        "100"
     ],
     [
         "Black cosmos",

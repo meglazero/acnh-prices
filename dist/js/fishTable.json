@@ -1,25 +1,5 @@
 [
     [
-        "Name",
-        "Image",
-        "Price",
-        "Location",
-        "Shadow size",
-        "Time",
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec"
-    ],
-    [
         "Bitterling",
         "https://vignette.wikia.nocookie.net/animalcrossing/images/e/ea/NH-Icon-bitterling.png",
         "900",

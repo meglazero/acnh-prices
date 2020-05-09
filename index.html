@@ -11,10 +11,40 @@
 <body>
     <div id="tables">
         <div id="fish">
+            <button value="Sort" onclick="sortName('fish')">Sort name</button>
+            <button value="Sort" onclick="sortPrice('fish')">Sort price</button>
+            <button value="Clear" onclick="clearTable('fish')">Clear sorting</button>
+            <div id="defaultFishTab">
+                <div id="name">Name</div>
+                <div id="image">Image</div>
+                <div id="price">Price</div>
+                <div id="location">Location</div>
+                <div id="shadow">Shadow</div>
+                <div id="time">Time</div>
+            </div>
         </div>
         <div id="bugs">
+            <button value="Sort" onclick="sortName('bugs')">Sort name</button>
+            <button value="Sort" onclick="sortPrice('bugs')">Sort price</button>
+            <button value="Clear" onclick="clearTable('bugs')">Clear sorting</button>
+            <div id="defaultBugsTab">
+                <div id="name">Name</div>
+                <div id="image"></div>
+                <div id="price">Price</div>
+                <div id="location">Location</div>
+                <div id="time">Time</div>
+            </div>
         </div>
         <div id="misc">
+            <button value="Sort" onclick="sortName('misc')">Sort name</button>
+            <button value="Sort" onclick="sortPrice('misc')">Sort price</button>
+            <button value="Clear" onclick="clearTable('misc')">Clear sorting</button>
+            <div id="defaultMiscTab">
+                <div id="name">Name</div>
+                <div id="image"></div>
+                <div id="source">Location</div>
+                <div id="price">Price</div>
+            </div>
         </div>
     </div>
 
