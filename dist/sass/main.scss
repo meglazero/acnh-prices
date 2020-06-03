@@ -5,6 +5,27 @@ body{
     padding: none;
     font-style: none;
 
+    #filterGroup{
+        display: block;
+        text-align: center;
+        
+        .filters{
+            padding: 4px;
+            margin: 4px;
+            background-color: #c7c7c7;
+            border: none;
+            border-radius: 5px;
+            border-right: dotted 3px #0878c2c9;
+            border-bottom: dotted 3px #0878c2c9;
+            font-weight: 700;
+            // border-style: none;
+            appearance: none;
+            text-align: center;
+            vertical-align: center;
+            width: 15%
+        }
+    }
+
     #tables{
         display: flex;
         flex-direction: row;
