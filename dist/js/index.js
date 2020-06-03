@@ -1,6 +1,13 @@
 let datetime = new Date();
-let curMonth = datetime.getMonth() + 1;
+let curMonth = datetime.getMonth();
 let curHour = datetime.getHours();
+
+const month = document.querySelector('#month');
+const hour = document.querySelector('#hour');
+
+month.selectedIndex = curMonth;
+hour.selectedIndex = curHour;
+
 let json_load = ['fish', 'bug', 'misc']
 
 let fish = []
@@ -191,6 +198,7 @@ function sortPrice(element) {
         })
 
         fishi % 2 == 0 ? fishi -= 1 : fishi += 1
+        fishn = 2
 
         fishGen.forEach(element => {
             genFish(element)
@@ -213,6 +221,7 @@ function sortPrice(element) {
         })
 
         bugsi % 2 == 0 ? bugsi -= 1 : bugsi += 1
+        bugsn = 2
 
         bugsGen.forEach(element => {
             genBugs(element)
@@ -251,6 +260,7 @@ function sortPrice(element) {
         })
 
         misci % 2 == 0 ? misci -= 1 : misci += 1
+        miscn = 2
 
         miscGen.forEach(element => {
             genMisc(element)
@@ -275,6 +285,7 @@ function sortName(element) {
         })
 
         fishn % 2 == 0 ? fishn -= 1 : fishn += 1
+        fishi = 2
 
         fishGen.forEach(element => {
             genFish(element)
@@ -297,6 +308,7 @@ function sortName(element) {
         })
 
         bugsn % 2 == 0 ? bugsn -= 1 : bugsn += 1
+        bugsi = 2
 
         bugsGen.forEach(element => {
             genBugs(element)
@@ -319,6 +331,7 @@ function sortName(element) {
         })
 
         miscn % 2 == 0 ? miscn -= 1 : miscn += 1
+        misci = 2
 
         miscGen.forEach(element => {
             genMisc(element)
@@ -398,7 +411,7 @@ function monthFilter(element) {
         fishGen = []
 
         fish.forEach(element => {
-            if (element[6 + curMonth] == "✓") {
+            if (element[6 + Number(month.value)] == "✓") {
                 fishGen.push(element)
             }
         });
@@ -406,6 +419,9 @@ function monthFilter(element) {
         fishGen.forEach(element => {
             genFish(element)
         });
+
+        fishi = 2
+        fishn = 2
     }else if(element == 'bugs'){
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
@@ -416,7 +432,7 @@ function monthFilter(element) {
         bugsGen = []
 
         bugs.forEach(element => {
-            if (element[5 + curMonth] == "✓") {
+            if (element[5 + Number(month.value)] == "✓") {
                 bugsGen.push(element)
             }
         });
@@ -424,6 +440,9 @@ function monthFilter(element) {
         bugsGen.forEach(element => {
             genBugs(element)
         });
+
+        bugsi = 2
+        bugsn = 2
     } else {
         alert('No filter for that option')
     }
@@ -440,7 +459,7 @@ function hourFilter(element) {
         fishGen = []
 
         fish.forEach(element => {
-            if (element[6].includes(curHour)) {
+            if (element[6].includes(Number(hour.value))) {
                 fishGen.push(element)
             }
         });
@@ -448,6 +467,9 @@ function hourFilter(element) {
         fishGen.forEach(element => {
             genFish(element)
         });
+
+        fishi = 2
+        fishn = 2
     }else if(element == 'bugs'){
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
@@ -458,7 +480,7 @@ function hourFilter(element) {
         bugsGen = []
 
         bugs.forEach(element => {
-            if (element[5].includes(curHour)) {
+            if (element[5].includes(Number(hour.value))) {
                 bugsGen.push(element)
             }
         });
@@ -466,6 +488,9 @@ function hourFilter(element) {
         bugsGen.forEach(element => {
             genBugs(element)
         });
+        
+        bugsi = 2
+        bugsn = 2
     }else{
         alert('No filter for that option')
     }
@@ -482,7 +507,7 @@ function hourMonthFilter(element) {
         fishGen = []
 
         fish.forEach(element => {
-            if (element[6 + curMonth] == "✓" && element[6].includes(curHour)) {
+            if (element[6 + Number(month.value)] == "✓" && element[6].includes(Number(hour.value))) {
                 fishGen.push(element)
             }
         });
@@ -490,6 +515,9 @@ function hourMonthFilter(element) {
         fishGen.forEach(element => {
             genFish(element)
         });
+        
+        fishi = 2
+        fishn = 2
     }else if(element == 'bugs'){
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
@@ -500,7 +528,7 @@ function hourMonthFilter(element) {
         bugsGen = []
 
         bugs.forEach(element => {
-            if (element[5 + curMonth] == "✓" && element[5].includes(curHour)) {
+            if (element[5 + Number(month.value)] == "✓" && element[5].includes(Number(hour.value))) {
                 bugsGen.push(element)
             }
         });
@@ -508,6 +536,9 @@ function hourMonthFilter(element) {
         bugsGen.forEach(element => {
             genBugs(element)
         });
+        
+        bugsi = 2
+        bugsn = 2
     }else{
         alert('No filter for that option')
     }
