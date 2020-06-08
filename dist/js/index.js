@@ -561,8 +561,10 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+let constLoop = true;
 async function update() {
-    while (document.hasFocus() == true){
+    constLoop = true;
+    while (constLoop == true){
         updateTime();
         await sleep(1000)
         // console.log('1 seconds later probably')
@@ -570,6 +572,7 @@ async function update() {
 }
 
 document.addEventListener("focus", update);
+document.addEventListener("blur", function(){constLoop = false})
 
 //fish: name, image, price, location, shadow, time, month1-12
 
