@@ -571,8 +571,8 @@ async function update() {
     }
 }
 
-document.addEventListener("focus", update);
-document.addEventListener("blur", function(){constLoop = false})
+window.addEventListener("focus", update);
+window.addEventListener("blur", function(){constLoop = false})
 
 //fish: name, image, price, location, shadow, time, month1-12
 
