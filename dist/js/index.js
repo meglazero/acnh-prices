@@ -1,12 +1,25 @@
-let datetime = new Date();
-let curMonth = datetime.getMonth();
-let curHour = datetime.getHours();
+// let datetime = new Date();
+// let curMonth = datetime.getMonth();
+// let curHour = datetime.getHours();
 
 const month = document.querySelector('#month');
 const hour = document.querySelector('#hour');
+const time = document.querySelector('.time');
 
-month.selectedIndex = curMonth;
-hour.selectedIndex = curHour;
+function updateTime(){
+    let datetime = new Date();
+    let curMonth = datetime.getMonth();
+    let curHour = datetime.getHours();
+
+    month.selectedIndex = curMonth;
+    hour.selectedIndex = curHour;
+    time.textContent = datetime.getHours() + ':' + datetime.getMinutes();
+}
+
+updateTime();
+
+// month.selectedIndex = curMonth;
+// hour.selectedIndex = curHour;
 
 let json_load = ['fish', 'bug', 'misc']
 
@@ -543,6 +556,20 @@ function hourMonthFilter(element) {
         alert('No filter for that option')
     }
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function update() {
+    while (document.hasFocus() == true){
+        updateTime();
+        await sleep(1000)
+        // console.log('1 seconds later probably')
+    }
+}
+
+document.addEventListener("focus", update);
 
 //fish: name, image, price, location, shadow, time, month1-12
 
