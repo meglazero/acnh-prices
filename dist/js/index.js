@@ -13,7 +13,7 @@ function updateTime(){
 
     month.selectedIndex = curMonth;
     hour.selectedIndex = curHour;
-    time.textContent = datetime.getHours() + ':' + datetime.getMinutes();
+    time.textContent = datetime;
 }
 
 updateTime();
