@@ -39,7 +39,6 @@ body #tables {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   width: 100%;
-  font-size: 1.3em;
 }
 
 body #tables div {
@@ -62,6 +61,7 @@ body #tables #fish button {
   margin: 2px;
   background-color: #0878c248;
   border: 3px double #464646;
+  min-height: 40px;
 }
 
 body #tables #fish #fishTab, body #tables #fish #defaultFishTab {
@@ -79,9 +79,13 @@ body #tables #fish #fishTab, body #tables #fish #defaultFishTab {
       grid-template-columns: 15% 15% 15% 25% 12% 12%;
   padding: auto;
   background-color: #0878c248;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #tables #fish #fishTab #image, body #tables #fish #defaultFishTab #image {
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -105,6 +109,7 @@ body #tables #bugs button {
   margin: 2px;
   background-color: #21c74b48;
   border: 3px double #464646;
+  min-height: 40px;
 }
 
 body #tables #bugs #bugsTab, body #tables #bugs #defaultBugsTab {
@@ -122,9 +127,13 @@ body #tables #bugs #bugsTab, body #tables #bugs #defaultBugsTab {
       grid-template-columns: 15% 15% 15% 37% 12%;
   padding: auto;
   background-color: #21c74b48;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #tables #bugs #bugsTab #image, body #tables #bugs #defaultBugsTab #image {
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -148,6 +157,7 @@ body #tables #misc button {
   margin: 2px;
   background-color: #b3d41f48;
   border: 3px double #464646;
+  min-height: 40px;
 }
 
 body #tables #misc #miscTab, body #tables #misc #defaultMiscTab {
@@ -165,21 +175,29 @@ body #tables #misc #miscTab, body #tables #misc #defaultMiscTab {
       grid-template-columns: 25% 12% 50% 12%;
   padding: auto;
   background-color: #b3d41f48;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #tables #misc #miscTab #image, body #tables #misc #defaultMiscTab #image {
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+body #tables #misc #defaultMiscTab {
+  margin-top: 46px;
 }
 
 body #tables #misc #miscTab:last-child {
   border-bottom: 1px solid black;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body #tables {
-    font-size: .8em;
+    font-size: .6em;
   }
   body #tables #fish button {
     width: 28%;
@@ -187,6 +205,8 @@ body #tables #misc #miscTab:last-child {
   }
   body #tables #fish #fishTab, body #tables #fish #defaultFishTab {
     min-width: 200px;
+    -ms-grid-columns: 18% 12% 15% 22% 12% 12%;
+        grid-template-columns: 18% 12% 15% 22% 12% 12%;
   }
   body #tables #bugs button {
     width: 28%;
@@ -194,6 +214,8 @@ body #tables #misc #miscTab:last-child {
   }
   body #tables #bugs #bugsTab, body #tables #bugs #defaultBugsTab {
     min-width: 200px;
+    -ms-grid-columns: 18% 12% 15% 37% 12%;
+        grid-template-columns: 18% 12% 15% 37% 12%;
   }
   body #tables #misc button {
     width: 28%;
@@ -201,5 +223,7 @@ body #tables #misc #miscTab:last-child {
   }
   body #tables #misc #miscTab, body #tables #misc #defaultMiscTab {
     min-width: 200px;
+    -ms-grid-columns: 25% 12% 50% 12%;
+        grid-template-columns: 25% 12% 50% 12%;
   }
 }

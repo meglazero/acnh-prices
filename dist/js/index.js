@@ -6,14 +6,18 @@ const month = document.querySelector('#month');
 const hour = document.querySelector('#hour');
 const time = document.querySelector('.time');
 
+let adjustedTime = false
+
 function updateTime(){
     let datetime = new Date();
     let curMonth = datetime.getMonth();
     let curHour = datetime.getHours();
 
-    month.selectedIndex = curMonth;
-    hour.selectedIndex = curHour;
     time.textContent = datetime;
+    if (!adjustedTime){
+        month.selectedIndex = curMonth;
+        hour.selectedIndex = curHour;
+    }
 }
 
 updateTime();
@@ -76,22 +80,25 @@ function triggered(json, table) {
         misc = json;
     }
     if (fish.length > 0 && bugs.length > 0 && misc.length > 0) {
-        fish.forEach(element => {
-            fishGen.push(element)
-        });
-        bugs.forEach(element => {
-            bugsGen.push(element)
-        });
+        // fish.forEach(element => {
+        //     fishGen.push(element)
+        // });
+        // bugs.forEach(element => {
+        //     bugsGen.push(element)
+        // });
         misc.forEach(element => {
             miscGen.push(element)
         });
 
-        fishGen.forEach(element => {
-            genFish(element);
-        });
-        bugsGen.forEach(element => {
-            genBugs(element)
-        });
+        hourMonthFilter('fish')
+        hourMonthFilter('bugs')
+
+        // fishGen.forEach(element => {
+        //     genFish(element);
+        // });
+        // bugsGen.forEach(element => {
+        //     genBugs(element)
+        // });
         miscGen.forEach(element => {
             genMisc(element)
         });
@@ -411,6 +418,7 @@ function clearTable(element) {
         miscn = 2
         misci = 2
     }
+    adjustedTime = false;
 }
 
 function monthFilter(element) {
@@ -567,12 +575,15 @@ async function update() {
     while (constLoop == true){
         updateTime();
         await sleep(1000)
-        // console.log('1 seconds later probably')
     }
 }
 
 window.addEventListener("focus", update);
-window.addEventListener("blur", function(){constLoop = false})
+window.addEventListener("blur", () => constLoop = false);
+
+document.querySelectorAll('.filters').forEach(element => {
+    element.addEventListener("focus", () => adjustedTime = true)
+});
 
 //fish: name, image, price, location, shadow, time, month1-12
 
