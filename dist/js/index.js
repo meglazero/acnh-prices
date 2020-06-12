@@ -1,7 +1,3 @@
-// let datetime = new Date();
-// let curMonth = datetime.getMonth();
-// let curHour = datetime.getHours();
-
 const month = document.querySelector('#month');
 const hour = document.querySelector('#hour');
 const time = document.querySelector('.time');
@@ -14,7 +10,7 @@ function updateTime(){
     let curHour = datetime.getHours();
 
     time.textContent = datetime;
-    if (!adjustedTime){
+    if (!adjustedTime && (month.selectedIndex != curMonth || hour.selectedIndex != curHour)){
         month.selectedIndex = curMonth;
         hour.selectedIndex = curHour;
     }
@@ -22,23 +18,22 @@ function updateTime(){
 
 updateTime();
 
-// month.selectedIndex = curMonth;
-// hour.selectedIndex = curHour;
-
-let json_load = ['fish', 'bug', 'misc']
+let json_load = ['fish', 'bugs', 'misc']
 
 let fish = []
-let fishGen = []
 let bugs = []
-let bugsGen = []
 let misc = []
-let miscGen = []
-fishi = 2
-bugsi = 2
-misci = 2
-fishn = 2
-bugsn = 2
-miscn = 2
+let mouseoverTest = []
+let fishi = 2
+let bugsi = 2
+let misci = 2
+let fishn = 2
+let bugsn = 2
+let miscn = 2
+let fishHour = false
+let bugsHour = false
+let fishMonth = false
+let bugsMonth = false
 
 const fishTable = document.querySelector('#fish')
 const bugsTable = document.querySelector('#bugs')
@@ -49,7 +44,7 @@ function loadJSON(callback, table) {
     xobj.overrideMimeType("application/json");
     if (table == 'fish') {
         xobj.open('GET', './dist/js/fishTable.json', true);
-    } else if (table == 'bug') {
+    } else if (table == 'bugs') {
         xobj.open('GET', './dist/js/bugTable.json', true);
     } else if (table == 'misc') {
         xobj.open('GET', './dist/js/miscTable.json', true);
@@ -74,35 +69,20 @@ function init(table) {
 function triggered(json, table) {
     if (table == 'fish') {
         fish = json
-    } else if (table == 'bug') {
+    } else if (table == 'bugs') {
         bugs = json;
     } else if (table == 'misc') {
         misc = json;
     }
     if (fish.length > 0 && bugs.length > 0 && misc.length > 0) {
-        // fish.forEach(element => {
-        //     fishGen.push(element)
-        // });
-        // bugs.forEach(element => {
-        //     bugsGen.push(element)
-        // });
+        hourMonthFilter('fish');
+        hourMonthFilter('bugs');
         misc.forEach(element => {
-            miscGen.push(element)
-        });
-
-        hourMonthFilter('fish')
-        hourMonthFilter('bugs')
-
-        // fishGen.forEach(element => {
-        //     genFish(element);
-        // });
-        // bugsGen.forEach(element => {
-        //     genBugs(element)
-        // });
-        miscGen.forEach(element => {
             genMisc(element)
         });
     }
+
+    tableListeners();
 };
 
 //begins process of pulling json data
@@ -209,7 +189,7 @@ function sortPrice(element) {
             fishTable.removeChild(element)
         });
 
-        fishGen.sort(function (a, b) {
+        fishSort = [...fish].sort(function (a, b) {
             if (fishi % 2 == 0) {
                 return b[2] - a[2];
             } else {
@@ -219,10 +199,18 @@ function sortPrice(element) {
 
         fishi % 2 == 0 ? fishi -= 1 : fishi += 1
         fishn = 2
-
-        fishGen.forEach(element => {
-            genFish(element)
-        });
+        
+        if(fishHour == true && fishMonth == true){
+            hourMonthFilter(element, fishSort);
+        } else if(fishHour == true) {
+            hourFilter(element, fishSort);
+        } else if(fishMonth) {
+            monthFilter(element, fishSort);
+        } else {
+            fishSort.forEach(element => {
+                genFish(element)
+            });
+        }
     }
 
     if (element == 'bugs') {
@@ -232,7 +220,7 @@ function sortPrice(element) {
             bugsTable.removeChild(element)
         });
 
-        bugsGen.sort(function (a, b) {
+        bugsSort = [...bugs].sort(function (a, b) {
             if (bugsi % 2 == 0) {
                 return b[2] - a[2];
             } else {
@@ -243,9 +231,17 @@ function sortPrice(element) {
         bugsi % 2 == 0 ? bugsi -= 1 : bugsi += 1
         bugsn = 2
 
-        bugsGen.forEach(element => {
-            genBugs(element)
-        });
+        if(bugsHour == true && bugsMonth == true){
+            hourMonthFilter(element, bugsSort);
+        } else if(bugsHour == true) {
+            hourFilter(element, bugsSort);
+        } else if(bugsMonth) {
+            monthFilter(element, bugsSort);
+        } else {
+            bugsSort.forEach(element => {
+                genBugs(element)
+            });
+        }
     }
 
     if (element == 'misc') {
@@ -255,7 +251,7 @@ function sortPrice(element) {
             miscTable.removeChild(element)
         });
 
-        miscGen.sort(function (a, b) {
+        miscSort = [...misc].sort(function (a, b) {
             if (misci % 2 == 0) {
                 if (b[3] != undefined && a[3] != undefined) {
                     return b[3] - a[3];
@@ -282,7 +278,7 @@ function sortPrice(element) {
         misci % 2 == 0 ? misci -= 1 : misci += 1
         miscn = 2
 
-        miscGen.forEach(element => {
+        miscSort.forEach(element => {
             genMisc(element)
         });
     }
@@ -296,7 +292,7 @@ function sortName(element) {
             fishTable.removeChild(element)
         });
 
-        fishGen.sort(function (a, b) {
+        fishSort = [...fish].sort(function (a, b) {
             if (fishn % 2 == 0) {
                 return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
             } else {
@@ -307,9 +303,17 @@ function sortName(element) {
         fishn % 2 == 0 ? fishn -= 1 : fishn += 1
         fishi = 2
 
-        fishGen.forEach(element => {
-            genFish(element)
-        });
+        if(fishHour == true && fishMonth == true){
+            hourMonthFilter(element, fishSort);
+        } else if(fishHour == true) {
+            hourFilter(element, fishSort);
+        } else if(fishMonth) {
+            monthFilter(element, fishSort);
+        } else {
+            fishSort.forEach(element => {
+                genFish(element)
+            });
+        }
     }
 
     if (element == 'bugs') {
@@ -319,7 +323,7 @@ function sortName(element) {
             bugsTable.removeChild(element)
         });
 
-        bugsGen.sort(function (a, b) {
+        bugsSort = [...bugs].sort(function (a, b) {
             if (bugsn % 2 == 0) {
                 return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
             } else {
@@ -330,9 +334,17 @@ function sortName(element) {
         bugsn % 2 == 0 ? bugsn -= 1 : bugsn += 1
         bugsi = 2
 
-        bugsGen.forEach(element => {
-            genBugs(element)
-        });
+        if(bugsHour == true && bugsMonth == true){
+            hourMonthFilter(element, bugsSort);
+        } else if(bugsHour == true) {
+            hourFilter(element, bugsSort);
+        } else if(bugsMonth) {
+            monthFilter(element, bugsSort);
+        } else {
+            bugsSort.forEach(element => {
+                genBugs(element)
+            });
+        }
     }
 
     if (element == 'misc') {
@@ -342,7 +354,7 @@ function sortName(element) {
             miscTable.removeChild(element)
         });
 
-        miscGen.sort(function (a, b) {
+        miscSort = [...misc].sort(function (a, b) {
             if (miscn % 2 == 0) {
                 return a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0;
             } else {
@@ -353,7 +365,7 @@ function sortName(element) {
         miscn % 2 == 0 ? miscn -= 1 : miscn += 1
         misci = 2
 
-        miscGen.forEach(element => {
+        miscSort.forEach(element => {
             genMisc(element)
         });
     }
@@ -363,55 +375,46 @@ function clearTable(element) {
     if (element == 'fish') {
         const genFishTable = document.querySelectorAll('#fishTab')
 
-        fishGen = []
-        fish.forEach(element => {
-            fishGen.push(element)
-        });
-
         genFishTable.forEach(element => {
             fishTable.removeChild(element)
         });
 
-        fishGen.forEach(element => {
+        fish.forEach(element => {
             genFish(element)
         });
         fishi = 2
         fishn = 2
+
+        fishHour = false
+        fishMonth = false
     }
 
     if (element == 'bugs') {
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
-        bugsGen = []
-        bugs.forEach(element => {
-            bugsGen.push(element)
-        });
-
         genBugsTable.forEach(element => {
             bugsTable.removeChild(element)
         });
 
-        bugsGen.forEach(element => {
+        bugs.forEach(element => {
             genBugs(element)
         });
 
         bugsi = 2
         bugsn = 2
+        
+        bugsHour = false
+        bugsMonth = false
     }
 
     if (element == 'misc') {
         const genMiscTable = document.querySelectorAll('#miscTab')
 
-        miscGen = []
-        misc.forEach(element => {
-            miscGen.push(element)
-        });
-
         genMiscTable.forEach(element => {
             miscTable.removeChild(element)
         });
 
-        miscGen.forEach(element => {
+        misc.forEach(element => {
             genMisc(element)
         });
 
@@ -421,7 +424,7 @@ function clearTable(element) {
     adjustedTime = false;
 }
 
-function monthFilter(element) {
+function monthFilter(element, optional) {
     if(element == 'fish'){
         const genFishTable = document.querySelectorAll('#fishTab')
 
@@ -429,20 +432,26 @@ function monthFilter(element) {
             fishTable.removeChild(element)
         });
 
-        fishGen = []
+        if (optional) {
+            optional.forEach(element => {
+                if (element[6 + Number(month.value)] == "✓") {
+                    genFish(element)
+                }
+            });
+        } else {
+            fish.forEach(element => {
+                if (element[6 + Number(month.value)] == "✓") {
+                    genFish(element)
+                }
+            });
+        }
 
-        fish.forEach(element => {
-            if (element[6 + Number(month.value)] == "✓") {
-                fishGen.push(element)
-            }
-        });
+        if (!optional) {
+            fishi = 2
+            fishn = 2
+        }
 
-        fishGen.forEach(element => {
-            genFish(element)
-        });
-
-        fishi = 2
-        fishn = 2
+        fishMonth = true
     }else if(element == 'bugs'){
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
@@ -450,26 +459,32 @@ function monthFilter(element) {
             bugsTable.removeChild(element)
         });
 
-        bugsGen = []
+        if (optional) {
+            optional.forEach(element => {
+                if (element[5 + Number(month.value)] == "✓") {
+                    genBugs(element)
+                }
+            });
+        } else {
+            bugs.forEach(element => {
+                if (element[5 + Number(month.value)] == "✓") {
+                    genBugs(element)
+                }
+            });
+        }
 
-        bugs.forEach(element => {
-            if (element[5 + Number(month.value)] == "✓") {
-                bugsGen.push(element)
-            }
-        });
+        if (!optional) {
+            bugsi = 2
+            bugsn = 2
+        }
 
-        bugsGen.forEach(element => {
-            genBugs(element)
-        });
-
-        bugsi = 2
-        bugsn = 2
+        bugsMonth = true
     } else {
         alert('No filter for that option')
     }
 }
 
-function hourFilter(element) {
+function hourFilter(element, optional) {
     if(element == 'fish'){
         const genFishTable = document.querySelectorAll('#fishTab')
 
@@ -477,20 +492,26 @@ function hourFilter(element) {
             fishTable.removeChild(element)
         });
 
-        fishGen = []
+        if (optional) {
+            optional.forEach(element => {
+                if (element[6].includes(Number(hour.value))) {
+                    genFish(element)
+                }
+            });
+        } else {
+            fish.forEach(element => {
+                if (element[6].includes(Number(hour.value))) {
+                    genFish(element)
+                }
+            });
+        }
 
-        fish.forEach(element => {
-            if (element[6].includes(Number(hour.value))) {
-                fishGen.push(element)
-            }
-        });
+        if (!optional){
+            fishi = 2
+            fishn = 2
+        }
 
-        fishGen.forEach(element => {
-            genFish(element)
-        });
-
-        fishi = 2
-        fishn = 2
+        fishHour = true
     }else if(element == 'bugs'){
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
@@ -498,26 +519,32 @@ function hourFilter(element) {
             bugsTable.removeChild(element)
         });
 
-        bugsGen = []
-
-        bugs.forEach(element => {
-            if (element[5].includes(Number(hour.value))) {
-                bugsGen.push(element)
-            }
-        });
-
-        bugsGen.forEach(element => {
-            genBugs(element)
-        });
+        if (optional) {
+            optional.forEach(element => {
+                if (element[5].includes(Number(hour.value))) {
+                    genBugs(element)
+                }
+            });
+        } else {
+            bugs.forEach(element => {
+                if (element[5].includes(Number(hour.value))) {
+                    genBugs(element)
+                }
+            });
+        }
         
-        bugsi = 2
-        bugsn = 2
+        if (!optional){
+            bugsi = 2
+            bugsn = 2
+        }
+
+        bugsHour = true
     }else{
         alert('No filter for that option')
     }
 }
 
-function hourMonthFilter(element) {
+function hourMonthFilter(element, optional) {
     if(element == 'fish'){
         const genFishTable = document.querySelectorAll('#fishTab')
 
@@ -525,20 +552,27 @@ function hourMonthFilter(element) {
             fishTable.removeChild(element)
         });
 
-        fishGen = []
-
-        fish.forEach(element => {
-            if (element[6 + Number(month.value)] == "✓" && element[6].includes(Number(hour.value))) {
-                fishGen.push(element)
-            }
-        });
-
-        fishGen.forEach(element => {
-            genFish(element)
-        });
+        if (optional){
+            optional.forEach(element => {
+                if (element[6 + Number(month.value)] == "✓" && element[6].includes(Number(hour.value))) {
+                    genFish(element)
+                }
+            });
+        } else {
+            fish.forEach(element => {
+                if (element[6 + Number(month.value)] == "✓" && element[6].includes(Number(hour.value))) {
+                    genFish(element)
+                }
+            });
+        }
         
-        fishi = 2
-        fishn = 2
+        if (!optional){
+            fishi = 2
+            fishn = 2
+        }
+
+        fishHour = true
+        fishMonth = true
     }else if(element == 'bugs'){
         const genBugsTable = document.querySelectorAll('#bugsTab')
 
@@ -546,23 +580,65 @@ function hourMonthFilter(element) {
             bugsTable.removeChild(element)
         });
 
-        bugsGen = []
-
-        bugs.forEach(element => {
-            if (element[5 + Number(month.value)] == "✓" && element[5].includes(Number(hour.value))) {
-                bugsGen.push(element)
-            }
-        });
-
-        bugsGen.forEach(element => {
-            genBugs(element)
-        });
+        if (optional){
+            optional.forEach(element => {
+                if (element[5 + Number(month.value)] == "✓" && element[5].includes(Number(hour.value))) {
+                    genBugs(element)
+                }
+            });
+        } else {
+            bugs.forEach(element => {
+                if (element[5 + Number(month.value)] == "✓" && element[5].includes(Number(hour.value))) {
+                    genBugs(element)
+                }
+            });
+        }
         
-        bugsi = 2
-        bugsn = 2
+        if (!optional){
+            bugsi = 2
+            bugsn = 2
+        }
+
+        bugsHour = true
+        bugsMonth = true
     }else{
         alert('No filter for that option')
     }
+}
+
+function tableListeners() {
+    fishMouse = document.querySelectorAll('#fishTab')
+    bugsMouse = document.querySelectorAll('#bugsTab')
+
+    fishMouse.forEach(element => {
+        element.addEventListener("click", () => {
+            fish.forEach(element2 => {
+                if (element2.includes(element.children[0].textContent)){
+                    console.log(element2)
+                    let testString = ''
+                    for (i = 7; i < element2.length; i++){
+                        testString += element2[i]
+                    }
+                    console.log(testString)
+                }
+            });
+        })
+    });
+
+    bugsMouse.forEach(element => {
+        element.addEventListener("click", () => {
+            bugs.forEach(element2 => {
+                if (element2.includes(element.children[0].textContent)){
+                    console.log(element2)
+                    let testString = ''
+                    for (i = 6; i < element2.length; i++){
+                        testString += element2[i]
+                    }
+                    console.log(testString)
+                }
+            });
+        })
+    });
 }
 
 function sleep(ms) {
