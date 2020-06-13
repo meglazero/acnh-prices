@@ -1,7 +1,3 @@
-// let datetime = new Date();
-// let curMonth = datetime.getMonth();
-// let curHour = datetime.getHours();
-
 const month = document.querySelector('#month');
 const hour = document.querySelector('#hour');
 const time = document.querySelector('.time');
@@ -21,9 +17,6 @@ function updateTime(){
 }
 
 updateTime();
-
-// month.selectedIndex = curMonth;
-// hour.selectedIndex = curHour;
 
 let json_load = ['fish', 'bug', 'misc']
 
@@ -80,12 +73,6 @@ function triggered(json, table) {
         misc = json;
     }
     if (fish.length > 0 && bugs.length > 0 && misc.length > 0) {
-        // fish.forEach(element => {
-        //     fishGen.push(element)
-        // });
-        // bugs.forEach(element => {
-        //     bugsGen.push(element)
-        // });
         misc.forEach(element => {
             miscGen.push(element)
         });
@@ -93,15 +80,11 @@ function triggered(json, table) {
         hourMonthFilter('fish')
         hourMonthFilter('bugs')
 
-        // fishGen.forEach(element => {
-        //     genFish(element);
-        // });
-        // bugsGen.forEach(element => {
-        //     genBugs(element)
-        // });
         miscGen.forEach(element => {
             genMisc(element)
         });
+
+        tableListeners();
     }
 };
 
@@ -563,6 +546,41 @@ function hourMonthFilter(element) {
     }else{
         alert('No filter for that option')
     }
+}
+
+function tableListeners() {
+    fishMouse = document.querySelectorAll('#fishTab')
+    bugsMouse = document.querySelectorAll('#bugsTab')
+
+    fishMouse.forEach(element => {
+        element.addEventListener("click", () => {
+            fish.forEach(element2 => {
+                if (element2.includes(element.children[0].textContent)){
+                    console.log(element2)
+                    let testString = ''
+                    for (i = 7; i < element2.length; i++){
+                        testString += element2[i]
+                    }
+                    console.log(testString)
+                }
+            });
+        })
+    });
+
+    bugsMouse.forEach(element => {
+        element.addEventListener("click", () => {
+            bugs.forEach(element2 => {
+                if (element2.includes(element.children[0].textContent)){
+                    console.log(element2)
+                    let testString = ''
+                    for (i = 6; i < element2.length; i++){
+                        testString += element2[i]
+                    }
+                    console.log(testString)
+                }
+            });
+        })
+    });
 }
 
 function sleep(ms) {
