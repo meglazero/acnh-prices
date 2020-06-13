@@ -33,9 +33,9 @@ fishn = 2
 bugsn = 2
 miscn = 2
 
-const fishTable = document.querySelector('#fish')
-const bugsTable = document.querySelector('#bugs')
-const miscTable = document.querySelector('#misc')
+const fishTable = document.querySelector('#fishPush')
+const bugsTable = document.querySelector('#bugsPush')
+const miscTable = document.querySelector('#miscPush')
 
 function loadJSON(callback, table) {
     var xobj = new XMLHttpRequest();
@@ -73,9 +73,7 @@ function triggered(json, table) {
         misc = json;
     }
     if (fish.length > 0 && bugs.length > 0 && misc.length > 0) {
-        misc.forEach(element => {
-            miscGen.push(element)
-        });
+        miscGen = [...misc]
 
         hourMonthFilter('fish')
         hourMonthFilter('bugs')
@@ -186,11 +184,7 @@ function genMisc(element) {
 
 function sortPrice(element) {
     if (element == 'fish') {
-        const genFishTable = document.querySelectorAll('#fishTab')
-
-        genFishTable.forEach(element => {
-            fishTable.removeChild(element)
-        });
+        fishTable.innerHTML = '';
 
         fishGen.sort(function (a, b) {
             if (fishi % 2 == 0) {
@@ -209,11 +203,7 @@ function sortPrice(element) {
     }
 
     if (element == 'bugs') {
-        const genBugsTable = document.querySelectorAll('#bugsTab')
-
-        genBugsTable.forEach(element => {
-            bugsTable.removeChild(element)
-        });
+        bugsTable.innerHTML = '';
 
         bugsGen.sort(function (a, b) {
             if (bugsi % 2 == 0) {
@@ -232,11 +222,7 @@ function sortPrice(element) {
     }
 
     if (element == 'misc') {
-        const genMiscTable = document.querySelectorAll('#miscTab')
-
-        genMiscTable.forEach(element => {
-            miscTable.removeChild(element)
-        });
+        miscTable.innerHTML = '';
 
         miscGen.sort(function (a, b) {
             if (misci % 2 == 0) {
@@ -273,11 +259,7 @@ function sortPrice(element) {
 
 function sortName(element) {
     if (element == 'fish') {
-        const genFishTable = document.querySelectorAll('#fishTab')
-
-        genFishTable.forEach(element => {
-            fishTable.removeChild(element)
-        });
+        fishTable.innerHTML = '';
 
         fishGen.sort(function (a, b) {
             if (fishn % 2 == 0) {
@@ -296,11 +278,7 @@ function sortName(element) {
     }
 
     if (element == 'bugs') {
-        const genBugsTable = document.querySelectorAll('#bugsTab')
-
-        genBugsTable.forEach(element => {
-            bugsTable.removeChild(element)
-        });
+        bugsTable.innerHTML = '';
 
         bugsGen.sort(function (a, b) {
             if (bugsn % 2 == 0) {
@@ -319,11 +297,7 @@ function sortName(element) {
     }
 
     if (element == 'misc') {
-        const genMiscTable = document.querySelectorAll('#miscTab')
-
-        genMiscTable.forEach(element => {
-            miscTable.removeChild(element)
-        });
+        miscTable.innerHTML = '';
 
         miscGen.sort(function (a, b) {
             if (miscn % 2 == 0) {
@@ -344,16 +318,9 @@ function sortName(element) {
 
 function clearTable(element) {
     if (element == 'fish') {
-        const genFishTable = document.querySelectorAll('#fishTab')
+        fishGen = [...fish]
 
-        fishGen = []
-        fish.forEach(element => {
-            fishGen.push(element)
-        });
-
-        genFishTable.forEach(element => {
-            fishTable.removeChild(element)
-        });
+        fishTable.innerHTML = '';
 
         fishGen.forEach(element => {
             genFish(element)
@@ -363,16 +330,9 @@ function clearTable(element) {
     }
 
     if (element == 'bugs') {
-        const genBugsTable = document.querySelectorAll('#bugsTab')
+        bugsGen = [...bugs]
 
-        bugsGen = []
-        bugs.forEach(element => {
-            bugsGen.push(element)
-        });
-
-        genBugsTable.forEach(element => {
-            bugsTable.removeChild(element)
-        });
+        bugsTable.innerHTML = '';
 
         bugsGen.forEach(element => {
             genBugs(element)
@@ -383,16 +343,9 @@ function clearTable(element) {
     }
 
     if (element == 'misc') {
-        const genMiscTable = document.querySelectorAll('#miscTab')
+        miscGen = [...misc]
 
-        miscGen = []
-        misc.forEach(element => {
-            miscGen.push(element)
-        });
-
-        genMiscTable.forEach(element => {
-            miscTable.removeChild(element)
-        });
+        miscTable.innerHTML = '';
 
         miscGen.forEach(element => {
             genMisc(element)
