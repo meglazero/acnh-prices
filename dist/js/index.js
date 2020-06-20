@@ -174,16 +174,15 @@ function genMisc(element) {
     const image = miscTemp.querySelector('#image');
     image.style.backgroundImage = "url('" + element[i] + "')";
     i++;
-    if (element.length != 3) {
-        const source = miscTemp.querySelector('#source');
-        source.textContent = element[i];
-        i++;
-    } else {
-        const source = miscTemp.querySelector('#source');
-        source.textContent = '';
 
-        const price = miscTemp.querySelector('#price');
-        price.textContent = element[i];
+    const source = miscTemp.querySelector('#source');
+    switch (element.length) {
+        case 3:
+            source.textContent = '';
+            break;
+        case 4:
+            source.textContent = element[i];
+            i++;
     }
 
     const price = miscTemp.querySelector('#price');
