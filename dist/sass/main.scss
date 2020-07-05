@@ -164,6 +164,48 @@ body{
                 border-bottom: 1px solid black;
             }
         }
+
+        #sea{
+            margin: 2px;
+            padding: auto;
+            width: auto;
+            text-align: center;
+
+            button{
+                height: auto;
+                width: 20%;
+                padding: 10px;
+                margin: 2px;
+                background-color: #7c21c748;
+                border: 3px double #464646;
+                min-height: 40px;
+            }
+            
+            #seaTab, #defaultSeaTab{
+                justify-content: center;
+                width: auto;
+                height: auto;
+                min-height: 40px;
+                border: 1px solid black;
+                border-bottom: 0px;
+                display: grid;
+                grid-template-columns: 15% 15% 15% 37% 12%;
+                padding: auto;
+                background-color: #7c21c748;
+                align-items: center;
+
+                #image{
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+
+            #seaTab:last-child{
+                border-bottom: 1px solid black;
+            }
+        }
     }
 }
 

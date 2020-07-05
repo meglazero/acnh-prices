@@ -195,6 +195,54 @@ body #tables #misc #miscTab:last-child {
   border-bottom: 1px solid black;
 }
 
+body #tables #sea {
+  margin: 2px;
+  padding: auto;
+  width: auto;
+  text-align: center;
+}
+
+body #tables #sea button {
+  height: auto;
+  width: 20%;
+  padding: 10px;
+  margin: 2px;
+  background-color: #7c21c748;
+  border: 3px double #464646;
+  min-height: 40px;
+}
+
+body #tables #sea #seaTab, body #tables #sea #defaultSeaTab {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  height: auto;
+  min-height: 40px;
+  border: 1px solid black;
+  border-bottom: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 15% 15% 15% 37% 12%;
+      grid-template-columns: 15% 15% 15% 37% 12%;
+  padding: auto;
+  background-color: #7c21c748;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #tables #sea #seaTab #image, body #tables #sea #defaultSeaTab #image {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+body #tables #sea #seaTab:last-child {
+  border-bottom: 1px solid black;
+}
+
 @media (max-width: 500px) {
   body #tables {
     font-size: .6em;
@@ -227,3 +275,4 @@ body #tables #misc #miscTab:last-child {
         grid-template-columns: 25% 12% 50% 12%;
   }
 }
+/*# sourceMappingURL=main.css.map */

@@ -98,7 +98,7 @@
             </div>
             <div id="bugsPush"></div>
         </div>
-        <div id="misc">
+        <!-- <div id="misc">
             <button value="Sort" onclick="sortName('misc')">Sort name</button>
             <button value="Sort" onclick="sortPrice('misc')">Sort price</button>
             <button value="Clear" onclick="clearTable('misc')">Clear sorting</button>
@@ -109,6 +109,27 @@
                 <div id="price">Price</div>
             </div>
             <div id="miscPush"></div>
+        </div> -->
+        <div id="sea">
+            <div id="buttonGroup">
+                <div id="buttonRow">
+                    <button value="Filter" onclick="hourFilter('sea')">Hour filter</button>
+                    <button value="Filter" onclick="monthFilter('sea')">Month filter</button>
+                    <button value="Filter" onclick="hourMonthFilter('sea')">Hour & month</button>
+                </div>
+                <div id="buttonRow">
+                    <button value="Sort" onclick="sortName('sea')">Sort name</button>
+                    <button value="Sort" onclick="sortPrice('sea')">Sort price</button>
+                    <button value="Clear" onclick="clearTable('sea')">Clear filter & sort</button>
+                </div>
+            </div>
+            <div id="defaultSeaTab">
+                <div id="name">Name</div>
+                <div id="image"></div>
+                <div id="price">Price</div>
+                <div id="time">Time</div>
+            </div>
+            <div id="seaPush"></div>
         </div>
     </div>
 
@@ -142,6 +163,15 @@
             <div id="image"></div>
             <div id="source">Location</div>
             <div id="price">Price</div>
+        </div>
+    </template>
+
+    <template id="seaTemplate">
+        <div id="seaTab">
+            <div id="name">Name</div>
+            <div id="image"></div>
+            <div id="price">Price</div>
+            <div id="time">Time</div>
         </div>
     </template>
 
