@@ -105,14 +105,15 @@ function triggered(json, table) {
 
         hourMonthFilter('fish');
         hourMonthFilter('bugs');
+        hourMonthFilter('sea');
 
         // miscGen.forEach(element => {
         //     genMisc(element)
         // });
 
-        seaGen.forEach(element => {
-            genSea(element);
-        });
+        // seaGen.forEach(element => {
+        //     genSea(element);
+        // });
 
         tableListeners();
     }
