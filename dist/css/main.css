@@ -274,5 +274,14 @@ body #tables #sea #seaTab:last-child {
     -ms-grid-columns: 25% 12% 50% 12%;
         grid-template-columns: 25% 12% 50% 12%;
   }
+  body #tables #sea button {
+    width: 28%;
+    font-size: .9em;
+  }
+  body #tables #sea #seaTab, body #tables #sea #defaultSeaTab {
+    min-width: 200px;
+    -ms-grid-columns: 25% 12% 50% 12%;
+        grid-template-columns: 25% 12% 50% 12%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
