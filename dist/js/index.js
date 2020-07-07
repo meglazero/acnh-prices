@@ -221,6 +221,15 @@ function genMisc(element) {
 function genSea(element) {
     const seaTemp = document.importNode(seaTemplate.content, true);
 
+    //
+    //Playing around with adding colors on click to represent
+    //donations if apps are not updated
+    //
+    // const seaGroup = seaTemp.querySelector('#seaTab')
+    // if(element.colors == 'purple'){
+    //     seaGroup.style.backgroundColor = '#7c21c748';
+    // }
+
     //sea: name, image, price, time, month1-12
     const name = seaTemp.querySelector('#name');
     name.textContent = uppercaseFirstLetter(element.name);
@@ -240,7 +249,7 @@ function genSea(element) {
         let hourEnd = parseInt(elementNorth.activeHours[0][1], 10);
         hourStart > 12 ? hourStart = hourStart - 12 + ' PM' : hourStart += ' AM';
         hourEnd > 12 ? hourEnd = hourEnd - 12 + ' PM' : hourEnd += ' AM';
-        time.textContent = hourStart + ' - ' + hourEnd + ' | ' + elementNorth.activeHours[0];
+        time.textContent = hourStart + ' - ' + hourEnd;
     };
 
     seaTable.appendChild(seaTemp);
@@ -753,6 +762,7 @@ function hourMonthFilter(element) {
 function tableListeners() {
     fishMouse = document.querySelectorAll('#fishTab')
     bugsMouse = document.querySelectorAll('#bugsTab')
+    seaMouse = document.querySelectorAll('#seaTab')
 
     fishMouse.forEach(element => {
         element.addEventListener("click", () => {
@@ -781,6 +791,24 @@ function tableListeners() {
                     console.log(testString)
                 }
             });
+        })
+    });
+
+    seaMouse.forEach(element => {
+        element.addEventListener("click", () => {
+            sea.forEach(element2 => {
+                let name = element2.name
+                if (name.includes(element.children[0].textContent.toLowerCase())) {
+                    // element2.colors = 'purple';
+                    console.log(element2.activeMonths);
+                    let testString = '';
+                    element2.activeMonths.northern.forEach(element3 => {
+                        testString += element3.month;
+                    });
+                    console.log(testString);
+                }
+            });
+            // element.style.backgroundColor = '#7c21c748';
         })
     });
 }

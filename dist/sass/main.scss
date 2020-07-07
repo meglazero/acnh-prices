@@ -4,6 +4,7 @@ body{
     margin: none;
     padding: none;
     font-style: none;
+    width: 100%;
 
     #filterGroup{
         display: block;
@@ -29,7 +30,8 @@ body{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 100%;
+        width: 97%;
+        margin: 1%;
 
         div{
             flex: 1;
@@ -189,7 +191,7 @@ body{
                 border: 1px solid black;
                 border-bottom: 0px;
                 display: grid;
-                grid-template-columns: 15% 15% 15% 37% 12%;
+                grid-template-columns: 25% 15% 37% 15%;
                 padding: auto;
                 background-color: #7c21c748;
                 align-items: center;
@@ -211,10 +213,13 @@ body{
 
 @media(max-width: 500px){
     body{  
+        width: 100%;
 
         #tables{
 
             font-size: .6em;
+            margin-right: 100px;
+
             #fish{
     
                 button{
@@ -254,6 +259,7 @@ body{
             }
 
             #sea{
+                padding-right: 10px;
     
                 button{
                     width: 28%;
@@ -262,7 +268,11 @@ body{
 
                 #seaTab, #defaultSeaTab{
                     min-width: 200px;
-                    grid-template-columns: 25% 12% 50% 12%;
+                    grid-template-columns: 25% 15% 37% 15%;
+                }
+
+                #time{
+                    padding-right: 5px;
                 }
             }
         }

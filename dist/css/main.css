@@ -4,6 +4,7 @@ body {
   margin: none;
   padding: none;
   font-style: none;
+  width: 100%;
 }
 
 body #filterGroup {
@@ -38,7 +39,8 @@ body #tables {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  width: 100%;
+  width: 97%;
+  margin: 1%;
 }
 
 body #tables div {
@@ -223,8 +225,8 @@ body #tables #sea #seaTab, body #tables #sea #defaultSeaTab {
   border-bottom: 0px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 15% 15% 15% 37% 12%;
-      grid-template-columns: 15% 15% 15% 37% 12%;
+  -ms-grid-columns: 25% 15% 37% 15%;
+      grid-template-columns: 25% 15% 37% 15%;
   padding: auto;
   background-color: #7c21c748;
   -webkit-box-align: center;
@@ -244,8 +246,12 @@ body #tables #sea #seaTab:last-child {
 }
 
 @media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
   body #tables {
     font-size: .6em;
+    margin-right: 100px;
   }
   body #tables #fish button {
     width: 28%;
@@ -274,14 +280,19 @@ body #tables #sea #seaTab:last-child {
     -ms-grid-columns: 25% 12% 50% 12%;
         grid-template-columns: 25% 12% 50% 12%;
   }
+  body #tables #sea {
+    padding-right: 10px;
+  }
   body #tables #sea button {
     width: 28%;
     font-size: .9em;
   }
   body #tables #sea #seaTab, body #tables #sea #defaultSeaTab {
     min-width: 200px;
-    -ms-grid-columns: 25% 12% 50% 12%;
-        grid-template-columns: 25% 12% 50% 12%;
+    -ms-grid-columns: 25% 15% 37% 15%;
+        grid-template-columns: 25% 15% 37% 15%;
+  }
+  body #tables #sea #time {
+    padding-right: 5px;
   }
 }
-/*# sourceMappingURL=main.css.map */
