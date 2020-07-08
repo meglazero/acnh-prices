@@ -80,7 +80,7 @@ body #tables #fish #fishTab, body #tables #fish #defaultFishTab {
   -ms-grid-columns: 15% 15% 15% 25% 12% 12%;
       grid-template-columns: 15% 15% 15% 25% 12% 12%;
   padding: auto;
-  background-color: #0878c248;
+  background-color: #0878c224;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -128,7 +128,7 @@ body #tables #bugs #bugsTab, body #tables #bugs #defaultBugsTab {
   -ms-grid-columns: 15% 15% 15% 37% 12%;
       grid-template-columns: 15% 15% 15% 37% 12%;
   padding: auto;
-  background-color: #21c74b48;
+  background-color: #21c74b24;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -228,7 +228,7 @@ body #tables #sea #seaTab, body #tables #sea #defaultSeaTab {
   -ms-grid-columns: 25% 15% 37% 15%;
       grid-template-columns: 25% 15% 37% 15%;
   padding: auto;
-  background-color: #7c21c748;
+  background-color: #7b20c524;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
