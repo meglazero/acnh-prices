@@ -36,6 +36,8 @@ fishn = 2;
 bugsn = 2;
 miscn = 2;
 sean = 2;
+fishl = 2;
+bugsl = 2;
 
 const fishTable = document.querySelector('#fishPush')
 const bugsTable = document.querySelector('#bugsPush')
@@ -246,6 +248,51 @@ function genSea(element) {
     seaTable.appendChild(seaTemp);
 }
 
+function sortLocation(element) {
+    switch (element) {
+        case 'fish':
+            fishTable.innerHTML = '';
+
+            fishGen.sort(function (a, b) {
+                if (fishl % 2 == 0) {
+                    return a[3] < b[3] ? -1 : a[3] > b[3] ? 1 : 0;
+                } else {
+                    return b[3] < a[3] ? -1 : b[3] > a[3] ? 1 : 0;
+                }
+            });
+
+            fishl % 2 == 0 ? fishl -= 1 : fishl += 1;
+            fishn = 2;
+            fishi = 2;
+
+            fishGen.forEach(element => {
+                genFish(element)
+            });
+            break;
+
+        case 'bugs':
+            console.log(bugsl);
+            bugsTable.innerHTML = '';
+
+            bugsGen.sort(function (a, b) {
+                //console.log(a)
+                if (bugsl % 2 == 0) {
+                    return a[3] < b[3] ? -1 : a[3] > b[3] ? 1 : 0;
+                } else {
+                    return b[3] < a[3] ? -1 : b[3] > a[3] ? 1 : 0;
+                }
+            });
+
+            bugsl % 2 == 0 ? bugsl -= 1 : bugsl += 1;
+            bugsn = 2;
+            bugsi = 2;
+
+            bugsGen.forEach(element => {
+                genBugs(element)
+            });
+    };
+}
+
 function sortPrice(element) {
     switch (element) {
         case 'fish':
@@ -261,6 +308,7 @@ function sortPrice(element) {
 
             fishi % 2 == 0 ? fishi -= 1 : fishi += 1;
             fishn = 2;
+            fishl = 2;
 
             fishGen.forEach(element => {
                 genFish(element)
@@ -280,6 +328,7 @@ function sortPrice(element) {
 
             bugsi % 2 == 0 ? bugsi -= 1 : bugsi += 1;
             bugsn = 2;
+            bugsl = 2;
 
             bugsGen.forEach(element => {
                 genBugs(element);
@@ -355,6 +404,7 @@ function sortName(element) {
 
             fishn % 2 == 0 ? fishn -= 1 : fishn += 1;
             fishi = 2;
+            fishl = 2;
 
             fishGen.forEach(element => {
                 genFish(element);
@@ -374,6 +424,7 @@ function sortName(element) {
 
             bugsn % 2 == 0 ? bugsn -= 1 : bugsn += 1;
             bugsi = 2;
+            bugsl = 2;
 
             bugsGen.forEach(element => {
                 genBugs(element);
@@ -433,6 +484,7 @@ function clearTable(element) {
             });
             fishi = 2;
             fishn = 2;
+            fishl = 2;
             break;
 
         case 'bugs':
@@ -446,6 +498,7 @@ function clearTable(element) {
 
             bugsi = 2;
             bugsn = 2;
+            bugsl = 2;
             break;
 
         case 'misc':
@@ -495,6 +548,7 @@ function monthFilter(element) {
 
             fishi = 2;
             fishn = 2;
+            fishl = 2;
             break;
 
         case 'bugs':
@@ -514,6 +568,7 @@ function monthFilter(element) {
 
             bugsi = 2;
             bugsn = 2;
+            bugsl = 2;
             break;
 
         case 'sea':
@@ -567,6 +622,7 @@ function hourFilter(element) {
 
             fishi = 2;
             fishn = 2;
+            fishl = 2;
             break;
 
         case 'bugs':
@@ -586,6 +642,7 @@ function hourFilter(element) {
 
             bugsi = 2;
             bugsn = 2;
+            bugsl = 2;
             break;
 
         case 'sea':
@@ -660,6 +717,7 @@ function hourMonthFilter(element) {
 
             fishi = 2;
             fishn = 2;
+            fishl = 2;
             break;
 
         case 'bugs':
@@ -679,6 +737,7 @@ function hourMonthFilter(element) {
 
             bugsi = 2;
             bugsn = 2;
+            bugsl = 2;
             break;
 
         case 'sea':
