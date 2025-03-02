@@ -292,11 +292,9 @@ function sortLocation(element) {
             break;
 
         case 'bugs':
-            console.log(bugsl);
             bugsTable.innerHTML = '';
 
             bugsGen.sort(function (a, b) {
-                //console.log(a)
                 if (bugsl % 2 == 0) {
                     return a[3] < b[3] ? -1 : a[3] > b[3] ? 1 : 0;
                 } else {
@@ -874,8 +872,8 @@ function tableListeners(str) {
                 element.addEventListener("click", () => {
                     fish.forEach(element2 => {
                         if (element2.includes(element.children[0].textContent)) {
-                            console.log(element2)
-                            console.log(element2[0])
+                            //console.log(element2)
+                            //console.log(element2[0])
                             if(!localStorage.getItem(element2[0])){
                                 localStorage.setItem(element2[0], true);
                                 element.style.backgroundColor = '#0878c248';
@@ -887,7 +885,7 @@ function tableListeners(str) {
                             for (i = 7; i < element2.length; i++) {
                                 testString += element2[i]
                             }
-                            console.log(testString)
+                            //console.log(testString)
                         }
                     });
                 })
@@ -901,8 +899,8 @@ function tableListeners(str) {
                 element.addEventListener("click", () => {
                     bugs.forEach(element2 => {
                         if (element2.includes(element.children[0].textContent)) {
-                            console.log(element2)
-                            console.log(element2[0])
+                            //console.log(element2)
+                            //console.log(element2[0])
                             if(!localStorage.getItem(element2[0])){
                                 localStorage.setItem(element2[0], true);
                                 element.style.backgroundColor = '#21c74b48';
@@ -914,7 +912,7 @@ function tableListeners(str) {
                             for (i = 6; i < element2.length; i++) {
                                 testString += element2[i]
                             }
-                            console.log(testString)
+                            //console.log(testString)
                         }
                     });
                 })
@@ -938,13 +936,13 @@ function tableListeners(str) {
                                 element.style.backgroundColor = '';
                                 localStorage.removeItem(element2.name);
                             }
-                            console.log(element2.name)
-                            console.log(element2.activeMonths);
+                            //console.log(element2.name)
+                            //console.log(element2.activeMonths);
                             let testString = '';
                             element2.activeMonths.northern.forEach(element3 => {
                                 testString += element3.month;
                             });
-                            console.log(testString);
+                            //console.log(testString);
                         }
 
                         
