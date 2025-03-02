@@ -117,7 +117,9 @@ function triggered(json, table) {
         //     genSea(element);
         // });
 
-        tableListeners();
+        // tableListeners('fish');
+        // tableListeners('bugs');
+        // tableListeners('sea');
     }
 };
 
@@ -133,6 +135,11 @@ function uppercaseFirstLetter(string) {
 function genFish(element) {
     let i = 0;
     const fishTemp = document.importNode(fishTemplate.content, true);
+
+    const fishGroup = fishTemp.querySelector('#fishTab')
+    if(localStorage.getItem(element[0])){
+        fishGroup.style.backgroundColor = '#0878c248';
+    }
 
     //fish: name, image, price, location, shadow, time, month1-12
     const name = fishTemp.querySelector('#name');
@@ -165,6 +172,11 @@ function genFish(element) {
 function genBugs(element) {
     let i = 0;
     const bugsTemp = document.importNode(bugsTemplate.content, true);
+
+    const bugsGroup = bugsTemp.querySelector('#bugsTab')
+    if(localStorage.getItem(element[0])){
+        bugsGroup.style.backgroundColor = '#21c74b48';
+    }
 
     //bugs: name, image, price, location, time, month1-12
     const name = bugsTemp.querySelector('#name');
@@ -223,6 +235,15 @@ function genMisc(element) {
 function genSea(element) {
     const seaTemp = document.importNode(seaTemplate.content, true);
 
+    //
+    //Playing around with adding colors on click to represent
+    //donations if apps are not updated
+    //
+    const seaGroup = seaTemp.querySelector('#seaTab')
+    if(localStorage.getItem(element.name)){
+        seaGroup.style.backgroundColor = '#7c21c748';
+    }
+
     //sea: name, image, price, time, month1-12
     const name = seaTemp.querySelector('#name');
     name.textContent = uppercaseFirstLetter(element.name);
@@ -242,7 +263,7 @@ function genSea(element) {
         let hourEnd = parseInt(elementNorth.activeHours[0][1], 10);
         hourStart > 12 ? hourStart = hourStart - 12 + ' PM' : hourStart += ' AM';
         hourEnd > 12 ? hourEnd = hourEnd - 12 + ' PM' : hourEnd += ' AM';
-        time.textContent = hourStart + ' - ' + hourEnd + ' | ' + elementNorth.activeHours[0];
+        time.textContent = hourStart + ' - ' + hourEnd;
     };
 
     seaTable.appendChild(seaTemp);
@@ -313,6 +334,7 @@ function sortPrice(element) {
             fishGen.forEach(element => {
                 genFish(element)
             });
+            tableListeners('fish');
             break;
 
         case 'bugs':
@@ -333,6 +355,7 @@ function sortPrice(element) {
             bugsGen.forEach(element => {
                 genBugs(element);
             });
+            tableListeners('bugs');
             break;
 
         case 'misc':
@@ -369,6 +392,7 @@ function sortPrice(element) {
                 genMisc(element);
             });
             break;
+            
         case 'sea':
             seaTable.innerHTML = '';
 
@@ -386,6 +410,12 @@ function sortPrice(element) {
             seaGen.forEach(element => {
                 genSea(element);
             });
+
+            tableListeners('sea');
+            break;
+
+        default:
+            alert('No valid case for price sort')
     }
 }
 
@@ -409,6 +439,8 @@ function sortName(element) {
             fishGen.forEach(element => {
                 genFish(element);
             });
+
+            tableListeners('fish');
             break;
 
         case 'bugs':
@@ -429,6 +461,8 @@ function sortName(element) {
             bugsGen.forEach(element => {
                 genBugs(element);
             });
+
+            tableListeners('bugs');
             break;
 
         case 'misc':
@@ -469,6 +503,12 @@ function sortName(element) {
             seaGen.forEach(element => {
                 genSea(element);
             });
+
+            tableListeners('sea');
+            break;
+
+        default:
+            alert('No valid case for name sort');
     }
 }
 
@@ -485,6 +525,7 @@ function clearTable(element) {
             fishi = 2;
             fishn = 2;
             fishl = 2;
+            tableListeners('fish');
             break;
 
         case 'bugs':
@@ -499,6 +540,7 @@ function clearTable(element) {
             bugsi = 2;
             bugsn = 2;
             bugsl = 2;
+            tableListeners('bugs');
             break;
 
         case 'misc':
@@ -525,6 +567,11 @@ function clearTable(element) {
 
             seai = 2;
             sean = 2;
+            tableListeners('sea');
+            break;
+        
+        default:
+            alert('No applicable case for clear table');
     }
     adjustedTime = false;
 }
@@ -549,6 +596,7 @@ function monthFilter(element) {
             fishi = 2;
             fishn = 2;
             fishl = 2;
+            tableListeners('fish')
             break;
 
         case 'bugs':
@@ -569,6 +617,7 @@ function monthFilter(element) {
             bugsi = 2;
             bugsn = 2;
             bugsl = 2;
+            tableListeners('bugs')
             break;
 
         case 'sea':
@@ -596,6 +645,7 @@ function monthFilter(element) {
 
             seai = 2;
             sean = 2;
+            tableListeners('sea')
             break;
 
         default:
@@ -623,6 +673,7 @@ function hourFilter(element) {
             fishi = 2;
             fishn = 2;
             fishl = 2;
+            tableListeners('fish')
             break;
 
         case 'bugs':
@@ -643,6 +694,7 @@ function hourFilter(element) {
             bugsi = 2;
             bugsn = 2;
             bugsl = 2;
+            tableListeners('bugs')
             break;
 
         case 'sea':
@@ -691,6 +743,7 @@ function hourFilter(element) {
 
             seai = 2;
             sean = 2;
+            tableListeners('sea')
             break;
 
         default:
@@ -718,6 +771,7 @@ function hourMonthFilter(element) {
             fishi = 2;
             fishn = 2;
             fishl = 2;
+            tableListeners('fish')
             break;
 
         case 'bugs':
@@ -738,6 +792,7 @@ function hourMonthFilter(element) {
             bugsi = 2;
             bugsn = 2;
             bugsl = 2;
+            tableListeners('bugs')
             break;
 
         case 'sea':
@@ -802,6 +857,7 @@ function hourMonthFilter(element) {
 
             seai = 2;
             sean = 2;
+            tableListeners('sea')
             break;
 
         default:
@@ -809,39 +865,104 @@ function hourMonthFilter(element) {
     }
 }
 
-function tableListeners() {
-    fishMouse = document.querySelectorAll('#fishTab')
-    bugsMouse = document.querySelectorAll('#bugsTab')
+function tableListeners(str) {
+    switch(str) {
+        case "fish":
+            fishMouse = document.querySelectorAll('#fishTab')
 
-    fishMouse.forEach(element => {
-        element.addEventListener("click", () => {
-            fish.forEach(element2 => {
-                if (element2.includes(element.children[0].textContent)) {
-                    console.log(element2)
-                    let testString = ''
-                    for (i = 7; i < element2.length; i++) {
-                        testString += element2[i]
-                    }
-                    console.log(testString)
-                }
+            fishMouse.forEach(element => {
+                element.addEventListener("click", () => {
+                    fish.forEach(element2 => {
+                        if (element2.includes(element.children[0].textContent)) {
+                            console.log(element2)
+                            console.log(element2[0])
+                            if(!localStorage.getItem(element2[0])){
+                                localStorage.setItem(element2[0], true);
+                                element.style.backgroundColor = '#0878c248';
+                            } else {
+                                element.style.backgroundColor = '';
+                                localStorage.removeItem(element2[0]);
+                            }
+                            let testString = ''
+                            for (i = 7; i < element2.length; i++) {
+                                testString += element2[i]
+                            }
+                            console.log(testString)
+                        }
+                    });
+                })
             });
-        })
-    });
+        break;
 
-    bugsMouse.forEach(element => {
-        element.addEventListener("click", () => {
-            bugs.forEach(element2 => {
-                if (element2.includes(element.children[0].textContent)) {
-                    console.log(element2)
-                    let testString = ''
-                    for (i = 6; i < element2.length; i++) {
-                        testString += element2[i]
-                    }
-                    console.log(testString)
-                }
+        case "bugs":
+            bugsMouse = document.querySelectorAll('#bugsTab')
+
+            bugsMouse.forEach(element => {
+                element.addEventListener("click", () => {
+                    bugs.forEach(element2 => {
+                        if (element2.includes(element.children[0].textContent)) {
+                            console.log(element2)
+                            console.log(element2[0])
+                            if(!localStorage.getItem(element2[0])){
+                                localStorage.setItem(element2[0], true);
+                                element.style.backgroundColor = '#21c74b48';
+                            } else {
+                                element.style.backgroundColor = '';
+                                localStorage.removeItem(element2[0]);
+                            }
+                            let testString = ''
+                            for (i = 6; i < element2.length; i++) {
+                                testString += element2[i]
+                            }
+                            console.log(testString)
+                        }
+                    });
+                })
             });
-        })
-    });
+        break;
+
+        case "sea":
+            seaMouse = document.querySelectorAll('#seaTab')
+
+            seaMouse.forEach(element => {
+                element.addEventListener("click", () => {
+                    let name = '';
+                    sea.forEach(element2 => {
+                        name = element2.name;
+                        if (name.includes(element.children[0].textContent.toLowerCase())) {
+                            // element2.colors = 'purple';
+                            if(!localStorage.getItem(element2.name)){
+                                localStorage.setItem(element2.name, true);
+                                element.style.backgroundColor = '#7c21c748';
+                            } else {
+                                element.style.backgroundColor = '';
+                                localStorage.removeItem(element2.name);
+                            }
+                            console.log(element2.name)
+                            console.log(element2.activeMonths);
+                            let testString = '';
+                            element2.activeMonths.northern.forEach(element3 => {
+                                testString += element3.month;
+                            });
+                            console.log(testString);
+                        }
+
+                        
+                        
+                    });
+                    // if(localStorage.getItem(name)){
+                    //     element.style.backgroundColor = '#7c21c748';
+                    // } else {
+                    //     element.style.backgroundColor = ''
+                    // }
+                })
+            });
+        break;
+
+        default:
+            alert("No listener case");
+
+    }
 }
 
 function sleep(ms) {
