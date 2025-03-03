@@ -927,7 +927,7 @@ function tableListeners(str) {
                     let name = '';
                     sea.forEach(element2 => {
                         name = element2.name;
-                        if (name.includes(element.children[0].textContent.toLowerCase())) {
+                        if (name.toLowerCase().includes(element.children[0].textContent.toLowerCase())) {
                             // element2.colors = 'purple';
                             if(!localStorage.getItem(element2.name)){
                                 localStorage.setItem(element2.name, true);
